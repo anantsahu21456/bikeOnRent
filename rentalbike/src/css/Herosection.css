@@ -1,0 +1,132 @@
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Dark background (black) */
+  height: auto;
+  min-height: 100vh;
+  color: white; /* White text */
+  margin-bottom: 20px;
+  overflow: visible; /* Prevent content clipping */
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  max-width: 600px;
+  flex: 1;
+  padding-right: 20px;
+  z-index: 2;
+  word-wrap: break-word;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+.hero-content h1 span {
+  color: #007bff; /* Blue color for 'Easily' */
+  text-decoration: underline;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.rent-now-btn {
+  background-color: #ff4c4c; /* Red button background */
+  font-weight: bold;
+  color: white; /* White button text */
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.rent-now-btn:hover {
+  background-color: #fff; /* White on hover */
+  color: #ff4c4c; /* Red text on hover */
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.hero-image img {
+  width: 90%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-image img {
+    width: 80%;
+  }
+}
+
+/* For Extra Small Screens */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .rent-now-btn {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+
+  .hero-image img {
+    width: 100%;
+  }
+}

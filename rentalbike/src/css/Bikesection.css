@@ -1,0 +1,152 @@
+
+.bike-section-container {
+  padding: 20px;
+  position: relative;
+}
+
+.bike-section-heading {
+  color: red;
+  position: absolute;
+  top: 10px;
+  left: 36px;
+  font-size: 1.8rem;
+}
+
+.bike-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 8%;
+  justify-content: center; /* Center-align cards on all screen sizes */
+}
+
+.bike-card {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bike-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bike-card-image-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px; /* Reduced the gap between the image and content */
+}
+
+.bike-card-content-section {
+  text-align: center;
+  margin: 0; /* Removed extra gap */
+  padding: 0; /* Ensures no unnecessary padding is applied */
+}
+
+.bike-card-content-section h3 {
+  font-size: 1.2rem;
+  margin: 5px 0; /* Small gap between title and other content */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 10px 15px;
+  margin: 0 10px;
+  background-color: #00ff15;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.pagination-button:hover {
+  background-color: #009e12;
+}
+
+.pagination-button:disabled {
+  background-color: #ff4c4c;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  font-size: 16px;
+  margin: 0 10px;
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+
+/* For Small Screens (Phones) */
+@media (max-width: 480px) {
+  .bike-card {
+    max-width: 90%; /* Cards take up most of the screen */
+  }
+
+  .bike-section-heading {
+    font-size: 1.5rem;
+    left: 20px;
+  }
+
+  .pagination-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .pagination-info {
+    font-size: 14px;
+  }
+}
+
+/* For Medium Screens (Tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .bike-card {
+    max-width: 45%; /* Cards align in two columns */
+  }
+
+  .bike-section-heading {
+    font-size: 1.6rem;
+  }
+}
+
+/* For Larger Screens (Desktops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .bike-card {
+    max-width: 30%; /* Cards align in three columns */
+  }
+
+  .bike-section-heading {
+    font-size: 1.8rem;
+  }
+
+  .bike-list {
+    gap: 25px; /* Increase gap between cards */
+  }
+}
+
+/* For Extra Large Screens */
+@media (min-width: 1025px) {
+  .bike-card {
+    max-width: 25%; /* Cards align in four columns */
+  }
+
+  .bike-list {
+    gap: 30px; /* Even more spacing for larger screens */
+  }
+
+  .bike-section-heading {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,33 @@
+/* GoToTop.css */
+#gototop {
+    position: fixed;   /* Fixes the button's position relative to the viewport */
+    bottom: 20px;      /* Position 20px from the bottom */
+    right: 20px;       /* Position 20px from the right */
+    z-index: 1000;     /* Make sure it stays on top of other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #gototop-btn {
+    background-color: #3498db;   /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 50%;          /* Round shape */
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow */
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  #gototop-btn:hover {
+    background-color: #2980b9;   /* Darker shade when hovered */
+    transform: scale(1.1);        /* Slight zoom effect */
+  }
+  
+  #gototop-btn:focus {
+    outline: none;                /* Remove focus outline */
+  }
+  

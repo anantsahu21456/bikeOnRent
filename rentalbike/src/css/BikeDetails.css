@@ -1,0 +1,222 @@
+/* Main container for the bike details */
+.bike-details-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bike-details-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.bike-image {
+  flex: 1;
+  max-width: 350px;
+}
+
+.bike-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.bike-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.payment-button:hover {
+  background-color: #d32f2f;
+}
+
+.add-review-section, .reviews-section {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.add-review-form .form-group {
+  margin-bottom: 10px;
+}
+
+.add-review-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.add-review-form input, .add-review-form textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black;
+}
+
+.submit-review-button {
+  padding: 10px 20px;
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-review-button:hover {
+  background-color: #388e3c;
+}
+
+/* General Reviews Section Styling */
+.reviews-section {
+  display: flex;
+  flex-wrap: wrap; /* Ensures cards wrap to the next line when needed */
+  gap: 10px; /* Space between each review card */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Review Card */
+.review-card {
+  flex: 0 0 calc(33.33% - 20px); /* Default: 3 items per row with space */
+  background-color: #fff;
+  margin-bottom: 10px; /* Space between rows */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  padding: 16px;
+}
+
+/* Review User (Avatar Section) */
+.review-user {
+  flex: 0 0 80px;  /* Fixed width for avatar */
+  margin-right: 10px;  /* Space between avatar and content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Review Info Section */
+#reviewinfo {
+  flex: 1; /* Take the remaining space */
+  line-height: 1.2;
+}
+
+/* Name, Rating, and Review Content Styling */
+.review-user-name {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.review-rating {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.review-content {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Pagination Buttons Styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Responsive Breakpoints */
+
+/* For screens less than 1024px (Tablets) */
+@media (max-width: 1024px) {
+  .review-card {
+    flex: 0 0 calc(50% - 20px); /* 2 items per row */
+  }
+}
+
+/* For screens less than 768px (Large Smartphones) */
+@media (max-width: 768px) {
+  .review-card {
+    flex: 0 0 calc(100% - 20px); /* 1 item per row */
+  }
+
+  .review-user {
+    flex: 0 0 60px; /* Smaller avatar size */
+  }
+
+  .review-avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .review-user-name,
+  .review-rating,
+  .review-content {
+    font-size: 0.8rem; /* Adjust text size for smaller screens */
+  }
+}
+
+/* For screens less than 480px (Small Smartphones) */
+@media (max-width: 480px) {
+  .reviews-section {
+    padding: 5px; /* Smaller padding */
+    gap: 5px; /* Reduce gap between cards */
+  }
+
+  .review-card {
+    padding: 10px; /* Smaller card padding */
+  }
+
+  .pagination button {
+    padding: 8px 15px; /* Smaller pagination buttons */
+    font-size: 0.8rem;
+  }
+}

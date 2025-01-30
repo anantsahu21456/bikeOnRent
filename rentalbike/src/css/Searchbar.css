@@ -1,0 +1,184 @@
+/* Base Styling for Search Bar */
+.search-bar {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e; /* Black background */
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5); /* Red glow shadow */
+  margin: -50px auto 20px; /* Center and overlap */
+  width: 90%;
+  max-width: 1200px; /* Max width for large screens */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.search-bar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(255, 0, 0, 0.8); /* Increased red glow on hover */
+}
+
+/* Group label and input fields together */
+.search-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 10px;
+  min-width: 200px; /* Ensure fields have a minimum width */
+}
+
+/* Labels */
+.search-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff; /* White text */
+  margin-bottom: 5px;
+}
+
+/* Input Fields */
+.search-here {
+  padding: 12px 15px;
+  border: 2px solid #ff0000; /* Red border */
+  border-radius: 30px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #ff0000; /* Red text */
+  background-color: #fff; /* White background */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-here:focus {
+  outline: none;
+  border-color: #ff0000; /* Keep the red border on focus */
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.8); /* Glow effect */
+}
+
+/* Search Button */
+.search-btn {
+  margin: 10px;
+  background-color: #ff0000; /* Red background */
+  color: #fff; /* White text */
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: flex-end; 
+}
+
+
+.search-btn:hover {
+  background-color: #fff; /* White background */
+  color: #ff0000; /* Red text */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.search-btn:active {
+  transform: scale(0.95); /* Scale down on click */
+}
+
+/* Responsive Design */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+  .search-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .search-field {
+    flex: 1 1 calc(50% - 20px); /* Two fields per row */
+    min-width: auto;
+  }
+
+  .search-btn {
+    flex: 1 1 100%; /* Full-width button */
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+  .search-field {
+    flex: 1 1 100%; /* Full-width fields */
+    margin: 10px 0;
+  }
+
+  .search-btn {
+    flex: 1 1 100%; /* Full-width button */
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+/* For Extra Small Screens */
+@media (max-width: 480px) {
+  .search-bar {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .search-here {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .search-btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+#loading{
+  width: 50px;
+  height: 50px;
+  border: 2px solid red ;
+  background-color: wheat;
+}
+
+#bike-results{
+  width: 300px;
+  height: 300px;
+  border: 2px solid red;
+  background-color: #fff;
+}
+
+/* Styling for the "based on your search" heading */
+.search-results-heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #ff4c4c;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Styling for the error message */
+.error-message {
+  color: red;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Optional: Style for the error message container */
+.error-message-container {
+  padding: 10px;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+

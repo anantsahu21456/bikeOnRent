@@ -1,0 +1,134 @@
+/* Main bike card styling */
+.bike-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  margin: 20px;
+  max-width: 300px; /* Smaller card size */
+  background-color: #1a1a1a79; /* Dark background for the card */
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.bike-card:hover {
+  transform: translateY(-10px); /* Slight more lift on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Bigger shadow on hover */
+}
+
+/* Image section styles */
+.bike-card-image-section {
+  position: relative;
+  width: 100%;
+  height: 180px; /* Smaller height */
+  overflow: hidden;
+  border-radius: 12px 12px 0 0; 
+}
+
+.bike-card-image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease; /* Smooth zoom-in effect */
+}
+
+.bike-card-image-section:hover img {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Image top-left corner text design */
+.image-design {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker semi-transparent background */
+  color: #fff; /* Bold red text */
+  padding: 8px 15px;
+  font-size: 14px; /* Slightly smaller text */
+  font-weight: 700;
+  border-radius: 8px;
+  animation: fadeIn 1s ease-out; /* Animation for design appearance */
+}
+
+/* Content section styles */
+.bike-card-content-section {
+  padding: 15px; /* Slightly smaller padding */
+  background-color: #222; /* Dark background for content */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0 0 12px 12px; /* Rounded bottom corners */
+  height: 200px; /* Slightly smaller height */
+}
+
+/* Bike Name and Model styling */
+.bike-name h3 {
+  font-size: 18px; /* Slightly smaller font size */
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #f5f5f5;
+  text-transform: uppercase; /* Capitalize for a modern look */
+  letter-spacing: 1px;
+}
+
+/* Horizontal line between bike name and details */
+.bike-name hr {
+  border: 0;
+  border-top: 1px solid #ff4c4c; /* Red line */
+  margin: 8px 0;
+}
+
+/* Fuel Type and Mileage on the same line */
+.bike-details {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  color: #f5f5f5;
+}
+
+.bike-details .fuel-type,
+.bike-details .mileage {
+  font-weight: 500;
+}
+
+/* Rent per day styling */
+.rent-per-day {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+  color: #ff4c4c; /* Red color for rent price */
+}
+
+/* Rent Now Button */
+.rent-btn {
+  margin-top: 15px;
+  padding: 10px 20px; /* Slightly smaller button size */
+  background-color: #ff4c4c; /* Red background */
+  color: #fff;
+  font-size: 14px; /* Slightly smaller font size */
+  font-weight: 700;
+  border: none;
+  border-radius: 50px; /* Rounded button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase; /* Capitalize text */
+}
+
+/* Rent Now Button hover effect */
+.rent-btn:hover {
+  background-color: #e13a3a; /* Darker red */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Animation for image text */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

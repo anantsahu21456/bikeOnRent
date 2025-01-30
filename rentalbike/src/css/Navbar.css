@@ -1,0 +1,206 @@
+/* Base Styling */
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff4c4cca;
+  padding: 10px 20px;
+  flex-wrap: wrap; /* Ensures the content wraps when the screen is smaller */
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: white;
+}
+
+.text {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px; 
+}
+
+ul li {
+  display: inline;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul li a:hover {
+  background-color: #fff;
+  color: #ff4c4c;
+  border-radius: 4px;
+}
+
+/* Auth Links Styling */
+.auth-links {
+  display: flex;
+  gap: 10px; 
+}
+
+.auth-btn {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  background-color: #ff4c4c;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-btn:hover {
+  background-color: #fff;
+  color: #ff4c4c;
+  font-weight: bold;
+}
+
+/* Active Link Styling */
+.active-link {
+  font-weight: bold;
+  color: #f4a261;
+}
+
+/* Responsive Design */
+
+/* For Medium Screens (Tablets & Small Laptops) */
+@media (max-width: 1024px) {
+  nav {
+    padding: 10px 15px;
+  }
+
+  ul {
+    gap: 15px;
+  }
+
+  ul li a {
+    font-size: 0.9rem; 
+    padding: 7px 12px; 
+  }
+
+  .auth-btn {
+    font-size: 0.9rem; 
+    padding: 7px 12px;
+  }
+}
+
+/* For Small Screens (Mobile Devices) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  ul {
+    flex-direction: column; 
+    gap: 10px;
+    width: 100%;
+  }
+
+  ul li a {
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  .auth-links {
+    flex-direction: column; 
+    gap: 5px;
+    width: 100%; 
+  }
+
+  .auth-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* For Extra Small Screens (Narrow Devices) */
+@media (max-width: 480px) {
+  nav {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 1.5rem; 
+  }
+
+  ul li a {
+    font-size: 0.9rem;
+  }
+
+  .auth-btn {
+    font-size: 0.85rem;
+    padding: 8px 10px; 
+  }
+}
+
+/* For Large Screens (Desktops) */
+@media (min-width: 1440px) {
+  nav {
+    padding: 15px 30px;
+  }
+
+  ul li a {
+    font-size: 1.1rem; 
+    padding: 10px 20px; 
+  }
+
+  .auth-btn {
+    font-size: 1.1rem; 
+    padding: 10px 20px;
+  }
+}
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  color: red;
+}

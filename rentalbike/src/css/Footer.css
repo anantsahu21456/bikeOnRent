@@ -1,0 +1,146 @@
+/* Footer Main Styles */
+.footer {
+  background-color: #40596b99;
+  color: #fff;
+  padding: 30px 20px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center; /* Centering the text in the main footer */
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center; /* Center-align all section content */
+}
+.footer-section h3{
+  color: #ff4c4c;
+}
+
+.footer-title {
+  font-size: 24px;
+  color: #ff4c4c;
+}
+
+/* Design the list you added under Footer Title */
+.footer-description {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column; /* Vertical layout for list */
+  gap: 8px;
+  color: #bbb;
+}
+
+.footer-description li {
+  font-size: 14px;
+}
+
+.footer-description li::before {
+  content: "•";
+  color: #f39c12;
+  margin-right: 8px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Ensures the links are displayed vertically */
+  align-items: center; /* Center-align links */
+}
+
+.footer-links li {
+  margin: 10px 0; /* Vertical gap between each link */
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #bbb;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff4c4c;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center; /* Center-align social media icons */
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ff4c4c;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #222;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .footer-main {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer-section {
+    flex: 1;
+    align-items: center; /* Ensure sections are aligned in the center */
+  }
+
+  /* For Quick Links - Ensure links are on separate lines */
+  .footer-links {
+    display: flex;
+    flex-direction: column; /* Ensure each link is displayed in its own block (vertical) */
+    align-items: center; /* Center-align links */
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center; /* Center-align social media icons */
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-title {
+    font-size: 28px;
+  }
+
+  .footer-bottom p {
+    font-size: 16px;
+  }
+}
+
+

@@ -17,9 +17,9 @@ app.use(cookieParser())
 // routes import
 import userRouter from './routes/user.routes.js'
 import reviewRouter from './routes/review.routes.js'
-// import PaymentsRouter from './routes/payments.routes.js'
-// import notificationRouter from './routes/notification.routes.js'
-// import bookingRouter from './routes/booking.routes.js'
+import PaymentsRouter from './routes/payments.routes.js'
+import notificationRouter from './routes/notification.routes.js'
+import bookingRouter from './routes/booking.routes.js'
 import bikeRouter from './routes/bike.routes.js'
 
 
@@ -28,9 +28,9 @@ import bikeRouter from './routes/bike.routes.js'
 // routes decleration
 app.use('/api/v1/user', userRouter)
 app.use('/api/v1/review',reviewRouter)
-// app.use('/api/v1/payments',PaymentsRouter)
-// app.use('/api/v1/notification',notificationRouter)
-// app.use('/api/v1/booking',bookingRouter)
+app.use('/api/v1/payments',PaymentsRouter)
+app.use('/api/v1/notification',notificationRouter)
+app.use('/api/v1/booking',bookingRouter)
 app.use('/api/v1/bike',bikeRouter)
 
 

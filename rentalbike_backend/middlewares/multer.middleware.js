@@ -9,8 +9,11 @@ const __dirname = path.dirname(__filename);
 // Setup Multer storage configuration
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    // Use absolute path for the destination
-    cb(null, path.join(__dirname, "../public/temp"));  // Ensure correct directory path
+    // Check if the environment is Vercel or similar
+    const uploadDir = process.env.NODE_ENV === 'production' ? '/tmp' : path.join(__dirname, "../public/temp");
+
+    // Use /tmp for Vercel, otherwise use the local directory
+    cb(null, uploadDir);  
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname);  // Use the original file name for the upload
